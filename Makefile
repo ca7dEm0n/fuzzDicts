@@ -35,9 +35,9 @@ help: default
 .PHONY: deps
 deps: default
 ifeq ($(LUAROCKS_VER),luarocks 3.)
-	luarocks install --lua-dir=$(LUAJIT_DIR) rockspec/ntm-master-0.rockspec --tree=deps --only-deps --local
+	luarocks install --lua-dir=$(LUAJIT_DIR) rockspec/tm-master-0.rockspec --tree=deps --only-deps --local
 else
-	luarocks install rockspec/ntm-master-0.rockspec --tree=deps --only-deps --local
+	luarocks install rockspec/tm-master-0.rockspec --tree=deps --only-deps --local
 endif
 
 

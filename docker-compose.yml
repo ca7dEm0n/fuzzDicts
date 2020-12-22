@@ -1,0 +1,9 @@
+gateway:
+  restart: unless-stopped
+  image: gateway_image
+  volumes:
+    - /usr/local/openresty/nginx/logs/:/usr/local/openresty/nginx/logs/
+    - /sys/fs/cgroup:/sys/fs/cgroup
+  ports:
+    - "8889:8888"
+    - "11001:11000"

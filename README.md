@@ -115,7 +115,7 @@ $ luacheck -q gateway
 
 ### wrk 测试
 
-```
+```bash
 # 安装wrk
 $ git clone https://github.com/wg/wrk.git 
 $ cd wrk && make

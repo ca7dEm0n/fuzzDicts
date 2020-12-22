@@ -38,7 +38,7 @@ show_server_info() {
 
 install_etcd() {
     export_or_prefix
-    ETCD_VER=v3.4.9
+    ETCD_VER=v3.4.14
 
     if [ ! -f "${ETCD_BIN_DIR}/etcd" ]; then
         mkdir -p ${ETCD_BIN_DIR}
