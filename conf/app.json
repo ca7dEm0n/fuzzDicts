@@ -13,7 +13,6 @@
         "key": "auth_key",
         "token_secret": "pXFb44gfdh96(3df&%18iodGq4ODQyMzc4"
     },
-    "token_secret" : "1txIq2QUkeFsZizt3vEpVzUQNFS2@DpEQwbbw8k0YJt0biFScH",
     "plugins": [
         "default_plugin",
         "discovery_plugin",

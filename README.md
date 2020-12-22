@@ -93,12 +93,13 @@ CentOS 7, Ubuntu 16.04, Ubuntu 18.04, Debian 9, Debian 10, macOS
      ```shell
      $ /bin/systemctl start openresty.service
      ```
-2. [Docker 镜像](https://hub.docker.com/r/apache/apisix)（适用所有系统）
+2. Docker 镜像（适用所有系统）
 
    默认会拉取最新的发布包：
 
    ```shell
-   $ 不要慌  一步步的来
+   $ docker build . -t gateway_image
+   $ docker-compose  up -d
    ```
    
 ### 针对开发者 
