@@ -27,15 +27,19 @@ end
 
 
 -- 匹配权限
-function _M.match(app_code,url, user_id, method)
+function _M.match(app_code, url, user_id, method)
     local rx = radix_cache:get(rx_key, false)
     local rule = rx:match(url)
-    local user_id_method = core_table.concat({app_code,'|',method,'|',user_id }) -- mg|GET|1
+    local user_id_method = core_table.concat({ app_code, '|', method, '|', user_id }) -- mg|GET|1
+    local user_id_all_method = core_table.concat({ app_code, '|', 'ALL', '|', user_id })
     --    log.error("mapping: ", user_id_method, rule[user_id_method])
     if rule and rule[user_id_method] == "y" then
         return true
+    elseif rule and rule[user_id_all_method] == "y" then
+        return true
+    else
+        return false
     end
-    return false
 end
 
 

@@ -89,7 +89,7 @@ function _M.do_in_access()
     local uri = ngx.var.uri
     local app_code = ngx.var.target_service_name
 
-    --    ngx.log(ngx.ERR, 'uri,method--->>>>>>>>>>>>>', uri, method, ngx.var.target_service_name )
+--    ngx.log(ngx.ERR, 'uri,method--->>>>>>>>>>>>>', uri, method, ngx.var.target_service_name )
 
     if is_superuser == true then
         return

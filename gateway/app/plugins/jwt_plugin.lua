@@ -47,6 +47,8 @@ function _M.do_in_access()
 
     local auth_key = cookie:get(jwt_key)
 
+--    ngx.log(ngx.ERR, 'uri,method--->>>>>>>>>>>>>', uri, method, auth_key, ngx.var.target_service_name )
+
     if auth_key == nil then
         local arg = ngx.req.get_uri_args()
         if arg ~= nil then
